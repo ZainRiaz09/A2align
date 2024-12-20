@@ -2325,7 +2325,8 @@ h3 {
 .home_image {
   height: auto;
   width: 650px;
-  margin-bottom: 50%;
+  margin-bottom: 100px;
+ 
 }
 
 /* line 149, ../../Arafath/CL/CL October/214. App Landing Page/HTML/scss/_offers.scss */
@@ -7146,4 +7147,126 @@ h6 {
     width: 100%; /* Occupy full width on mobile */
     /* Other mobile-specific styles */
   }
+}
+/* Slider Area Base Styles */
+.slider_area {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.single_slider {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.slider_text {
+    position: relative;
+    z-index: 2;
+}
+
+.slider_text h3 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.slider_text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+.phone_thumb {
+    position: relative;
+    text-align: right;
+}
+
+.phone_thumb img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;  
+    /* margin-top: 300vh; */
+}
+
+/* Mobile Styles (320px and up) */
+@media (max-width: 767px) {
+    .single_slider {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .slider_text h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .slider_text p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .phone_thumb {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .phone_thumb img {
+        max-width: 90%;
+        margin-top: -10vh;
+        /* margin-top: 300vh; */
+    }
+}
+
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .slider_text h3 {
+        font-size: 36px;
+    }
+    
+    .slider_text p {
+        font-size: 15px;
+        max-width: 450px;
+    }
+    
+    .phone_thumb img {
+        max-width: 95%;
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    .single_slider {
+        min-height: 100vh;
+    }
+    
+    .slider_text h3 {
+        font-size: 50px;
+    }
+    
+    .slider_text p {
+        font-size: 16px;
+        max-width: 520px;
+    }
+    
+    .phone_thumb img {
+        max-width: 100%;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .slider_area {
+        touch-action: pan-y pinch-zoom;
+    }
+    
+    .phone_thumb img {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
 }
